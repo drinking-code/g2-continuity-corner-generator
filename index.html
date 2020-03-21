@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>G2 Continuity Corners</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="interactions">
-        <input type="range" id="radius" min="0" max="40" value="20">
+    <div id="panel">
+        <input type="range" id="radius" min="0" max="20" value="18">
     </div>
-    <svg id="canvas">
-
-    </svg>
+    <div id="canvas">
+        <svg>
+            <path id="corner" d="M0,40S0,31,0,20S5,0,20,0L40,0S49,0,60,0S80,5,80,20L80,40S80,49,80,60S75,80,60,80L40,80S31,80,20,80S0,75,0,60L0,40"></path>
+        </svg>
+    </div>
+<script src="g2generator.js"></script>
+<script src="draw.js"></script>
 </body>
 </html>
