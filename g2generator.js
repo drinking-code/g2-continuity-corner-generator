@@ -20,7 +20,11 @@ starting point ──┘
 //M 0 20 S 0 33, 0 20 S 7 0, 20 0 (mean example at 18px border radius, corner point at C(0|0))
 
 function generateSvgSquircle(height, width, radius) {
+    height = Number(height);
+    width = Number(width);
     radius = Number(radius);
+    if (isNaN(height)) throw new Error(`'height' must be a number`);
+    if (isNaN(width)) throw new Error(`'width' must be a number`);
     if (isNaN(radius)) throw new Error(`'radius' must be a number`);
     const ratio = 13/18 * radius,
         cStart = 10/9 * radius,
