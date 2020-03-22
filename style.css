@@ -75,6 +75,8 @@ label[for=radius] {
 
     border: 2px solid rgb(var(--color));
     border-radius: 20px;
+
+    opacity: .5;
 }
 
 #dimensions {

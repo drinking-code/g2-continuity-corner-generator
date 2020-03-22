@@ -1,9 +1,18 @@
 $ = selector => document.querySelector(selector);
 
-function setSquircle() {
-    $("#corner").setAttribute("d", generateSvgSquircle($("#height").value / 3, $("#width").value / 3, $("#radius").value));
-    $("svg").style.height = $("#height").value / 3 + "px";
-    $("svg").style.width = $("#width").value / 3 + "px";
+function setSquircle(e) {
+    const height = $("#height").value,
+        width = $("#width").value;
+    let radius = $("#radius").value;
+    //cap radius to prevent artifacts
+    const max = Math.min(height, width);
+    radius = Math.min(radius, max * .4);
+    $("#radius").value = radius;
+    $("label[for=radius]").innerText = Math.round(radius);
+    //set values
+    $("#corner").setAttribute("d", generateSvgSquircle(height, width, radius));
+    $("svg").style.height = height + "px";
+    $("svg").style.width = width.value + "px";
 }
 
 $("#radius").addEventListener("input", setSquircle);
