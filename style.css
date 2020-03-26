@@ -32,7 +32,7 @@ input[type=range] {
 }
 
 .corner-radius:before {
-    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#dcdcdc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,8 3,3 8,3"/><polyline points="21,16 21,21 16,21"/><line x1="3" y1="3" x2="8" y2="8"/><line x1="21" y1="21" x2="14" y2="14"/><path d="M8,21c0,0,0-3,0-3c0-7,3-10,10-10h3"/></svg>') center;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23dcdcdc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3,8 3,3 8,3"/><polyline points="21,16 21,21 16,21"/><line x1="3" y1="3" x2="8" y2="8"/><line x1="21" y1="21" x2="14" y2="14"/><path d="M8,21c0,0,0-3,0-3c0-7,3-10,10-10h3"/></svg>') center;
 }
 
 #radius {align-self: end}
