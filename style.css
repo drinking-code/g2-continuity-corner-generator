@@ -11,6 +11,10 @@ body > *:not(svg) {
     padding: 0 100px;
 }
 
+input[type=range] {
+    grid-column: 1 / 3;
+}
+
 #panel {
     z-index: 100000;
     background: rgb(var(--background));
