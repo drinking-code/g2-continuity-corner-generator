@@ -1,23 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-
 :root {
     --circle-radius: 200px;
-
-    --background: 50,50,50;
-    --color: 200,200,200;
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-
     display: grid;
     grid-template-rows: 200px 1fr;
-
-    background: rgb(var(--background));
-    font-family: 'Montserrat Alternates', sans-serif;
-    color: rgb(var(--color));
 }
 
 body > *:not(svg) {
@@ -34,44 +21,6 @@ body > *:not(svg) {
     grid-template-rows: auto auto;
     grid-auto-flow: column;
     grid-gap: 7px 50px;
-}
-
-input[type=range] {
-    width: 200px;
-    height: 4px;
-
-    grid-column: 1 / 3;
-    margin: 0;
-    padding: 0;
-
-    -webkit-appearance: none;
-    background: rgba(var(--color), .5);
-    border-radius: 2px;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    height: 10px;
-    width: 10px;
-
-    -webkit-appearance: none;
-    background: rgb(var(--color));
-    border-radius: calc(10px / 2);
-    box-shadow: 0 0 0 4px rgba(var(--color), .2);
-
-    cursor: pointer;
-}
-
-.icon {
-    height: 24px;
-    width: 24px;
-    opacity: .5;
-}
-
-.icon:before {
-    content: "";
-    display: block;
-    height: 24px;
-    width: 24px;
 }
 
 .icon.corner-radius {
@@ -162,52 +111,6 @@ label[for=width] {
     grid-gap: 10px;
     align-items: center;
 }
-
-input[type=checkbox].toggle {
-    height: 30px;
-    width: 50px;
-
-    -webkit-appearance: none;
-    background: rgba(var(--color), .3);
-    border-radius: 15px;
-
-    cursor: pointer;
-}
-
-input[type=checkbox].toggle:after {
-    content: "";
-    display: inline-block;
-
-    height: 26px;
-    width: 26px;
-    margin: 2px;
-
-    background: rgb(var(--color));
-    border-radius: 14px;
-
-    transition: .2s cubic-bezier(.7,0,.3,1);
-    -webkit-transition: .2s cubic-bezier(.7,0,.3,1);
-}
-
-input[type=checkbox].toggle:checked:after {
-    content: "";
-    display: inline-block;
-
-    height: 26px;
-    width: 26px;
-    margin: 2px 2px 2px 22px;
-
-    background: rgb(var(--color));
-    border-radius: 14px;
-}
-
-code {
-    font-family: 'Source Code Pro', -webkit-pictograph, monospace;
-    background: rgba(0,0,0,.2);
-    padding: 1px 3px 2px;
-    border-radius: 5px;
-}
-
 
 #canvas {
     position: absolute;
